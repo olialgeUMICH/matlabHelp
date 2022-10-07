@@ -72,3 +72,67 @@ doubleEvens(1)
 ```
 
 ### Matrix
+
+Like an array, a matrix is created using square brackets and indexed using parentheses.
+Rows of the matrix are divided by semicolons `;`, and columns are divided by commas `,` or spaces. 
+An example of a matrix:
+```matlab
+% In matlab, spaces or commas can be used to differentiate the entries in a matrix row,
+% so the following statements are equivalient
+sample2dMat = [1 2; 3 4];
+sample2dMat = [1, 2; 3, 4];
+```
+Indexing is similar to arrays.
+```matlab
+% Use '...' to separate lines while scripting. It can help make reading the code easier.
+sample2dMat = [1, 2, 3; ...
+               4, 5, 6; ...
+               7, 8, 9];
+sample2dMat(1)
+>> ans = 1
+
+sample2dMat(1, 3)
+>> ans = 3
+
+sample2dMat(:, 2)
+>> ans = 
+   2
+   5
+   8
+```
+
+Note, there is more than one operator for multiplication / division involving arrays.
+Be sure you are using the correct operator!
+For example:
+```matlab
+rowVec = [1, 2, 3];
+colVec = [5; 10; 20];
+
+% Dot product, the following are equivalent
+rowVec * colVec;
+dot(rowVec, colVec);
+
+% Times/element-wise, the following are equivalent
+rowVec .* colVec;
+times(rowVec, colVec);
+```
+
+#### Exercises
+1. Create a 3 x 5 matrix
+2. Multiply your 3 x 5 matrix by a scalar
+3. Create a 3 x 3 matrix where every value is the same
+4. Create a 4 x 4 diagonal matrix
+*Challenge*
+5. Find three different ways to create the matrix 
+
+| 1 | 0 | 0 |
+|---|---|---|
+| 0 | 1 | 0 |
+| 0 | 0 | 1 |
+
+6. Find three different ways to crate the matrix
+
+| 0 | 0 | 0 |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 0 | 0 |
