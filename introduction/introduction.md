@@ -12,3 +12,4 @@ For example, if you wrote a simple function in your working directory like `find
 Instead, your current directory determines which `findMean()` gets called; if you’re in your personal directory, it’s the arithmetic version, and if your current directory is the BCIL-Shared repository, it’s the geometric. 
 Keep this in mind when writing/editing.
 
+## The MATLAB IDE
