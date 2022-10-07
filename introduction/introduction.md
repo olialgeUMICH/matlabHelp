@@ -13,3 +13,27 @@ Instead, your current directory determines which `findMean()` gets called; if yo
 Keep this in mind when writing/editing.
 
 ## The MATLAB IDE
+This is a view of how I have my editor set up:
+
+<img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide1.png" 
+alt="Image of Matlab IDE" border="10" />
+
+The editor is broken into several panels. There are the panels I use most often:
+
+### Current Folder Panel
+<img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide2.png" 
+alt="Image of Current Folder Panel" border="10" />
+Shows the current working directory. 
+If you select the view option “Indicate Files not on Path”, only the files in the current working directory and those directories added to the path will be highlighted.
+
+### Command Window
+<img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide3.png" 
+alt="Image of Matlab Command Window" border="10" />
+Shows commands that are run.
+Statements followed by a semicolon have their output suppressed.
+If you want to run a line from the script panel, select the line and then press the F9 function key.
+
+### Script Panel
+<img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide4.png" 
+alt="Image of Matlab Script Panel" border="10" />
+Shows the script you are currently editing, and allows you to mark breakpoints on lines for debugging.
