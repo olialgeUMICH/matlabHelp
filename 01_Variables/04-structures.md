@@ -59,3 +59,58 @@ structOfStructs(1).name
 >> ans = "Alpha Bravo"
 ```
 
+### Table
+A table is a different structured data type, with many customization options.
+While structs are useful to get all the information about a particular entry, tables are useful to get multiple data pieces among multiple entries, similar to an Excel sheet. 
+Tables can be initialized by grouping variables, like the following:
+```matlab
+names = ["Alpha Bravo"; "Charlie Delta"];
+nYears = [4; 1];
+nProjects = [2; 1];
+isFaculty = [true; false];
+isStudent = [false; true];
+offices = ["A-123"; "A-123-1"];
+emails = ["alpha_bravo@example.com"; "cDelta@example.com"];
+labMemberTable = table(names, nYears, nProjects, isFaculty, isStudent, offices, emails)
+>>labMemberTable =
+
+  2×7 table
+
+         names         nYears    nProjects    isFaculty    isStudent     offices         emails          
+    _______________    ______    _________    _________    _________    _________    ______________
+
+    "Alpha Bravo"        4           2          true         false      "A-123"      "alpha_bravo@example.com"
+    "Charlie Delta"      1           1          false        true       "A-123-1"    "cDelta@example.com"     
+
+```
+
+You can add a new entry to the table by creating a smaller table and concatenating it:
+```matlab
+% Tables being concatenated need the same variable names
+labMember2 = table("Echo Foxtrot", 3, 2, false, false, "B-1", "echo1990@example.com" , …
+                   'VariableNames', labMemberTable.Properties.VariableNames);
+labMemberTable = [labMemberTable; labMember2];
+```
+
+To add a new field to the table, you can use the dot operator:
+```matlab
+isPostdoc = [false; false; true];
+labMemberTable.isPostdoc = isPostdoc;
+```
+To access a row or column of the table and have it retain table format, use parentheses. 
+To obtain the values of the table and have them in their original format (cell, string, numeric, etc.), use curly braces or dot indexing.
+```matlab
+% Different ways of accessing table values
+% Array
+yearIndex = 2;  % Use variables, not magic numbers!
+labMemberTable.nYears
+labMemberTable{:, 'nYears'}
+labMemberTable{:, yearIndex}
+
+% Table
+labMemberTable(:, 'nYears')
+labMemberTable(:, yearIndex)
+```
+
+### Cells
+Cells are similar to tables in how they can be indexed, buy curly braces are used instead of parentheses.
