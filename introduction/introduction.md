@@ -37,3 +37,36 @@ If you want to run a line from the script panel, select the line and then press 
 <img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide4.png" 
 alt="Image of Matlab Script Panel" border="10" />
 Shows the script you are currently editing, and allows you to mark breakpoints on lines for debugging.
+
+### Workspace Panel
+<img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide5.png" 
+alt="Image of Workspace Panel" border="10" />
+Shows which variables are in your current environment.
+Very helpful when stepping through code!
+
+### Toolstrip / Command Ribbon
+<img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide6.png" 
+alt="Image of Command Ribbon set to the Home tab" border="10" />
+Quick access to command commands. The tabs I use most often are "Home", which I use for changing the layout, editing preferences, or installing Add-Ons, 
+
+<img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide7.png" 
+alt="Image of Command Ribbon set to the Editor tab" border="10" />
+and "Editor", which I use when editing or debugging.
+
+### Documentation Window
+<img src="https://github.com/olialgeUMICH/matlabHelp/blob/main/introduction/ide8.png" 
+alt="Image of Documentation Window" border="10" />
+By typing `doc` into the command window, you can open Matlab's documentation.
+If you type `doc <term>`, this searches the documentation for the specified term.
+
+#### Exercises
+1. Get a feel for the IDE and arrange the panels in a way that feels comfortable to you.
+2. Find where to change your editor window's font size.
+3. Add and then remove a directory from your Matlab PATH
+4. Find the MATLAB documentation for creating a bar plot
+5. Using the MATLAB documentation, find two different ways to transpose a vector
+
+*Challenge*
+
+6. Find the Matlab documentation for the operator '==' (example: 2 + 2 == 4) 
+7. Find the formula for a Support Vector Machine Classifier's box constraint using the Matlab documentation.
