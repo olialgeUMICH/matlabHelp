@@ -25,3 +25,23 @@ end
 ```
 
 In the example, `inputVar` is the input, `outputVar` and the displayed values are output, and the multiplication, variable assignment, and call to `disp()` are the commands.
+
+## Function scope
+A function is limited by scope. That is, a function can only access the variables that are directly passed to it via input, or the variables that are assigned within it.
+The way that Matlab scripts are structured, a script must have a function that shares the same name as the file name. In the above example, `simpleFunc()` must exist in the script file `simpleFunc.m`.
+
+A script can have more than one function within it. The main function, which has the same name as the script's file name, and any helper/sub-functions existing below the main function. These subfunctions can only be accessed by the main function of the script, and cannot be *directly* accessed by any other scripts.
+
+Take the example below, which exists in the file `myNewFunc.m`:
+
+```matlab
+function outputVar = myNewFunc(inputVar)
+% REQUIRES: inputVar is numeric
+    outputVar = helperFunc(inputVar);
+end
+
+function helperOut = helperFunc(helperIn)
+% REQUIRES: helperIn is numeric
+    helperOut = helperIn .^ 2;
+end
+```
