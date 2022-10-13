@@ -80,3 +80,30 @@ function helperOut = helperFunc(helperIn)
 end
 ```
 
+This is now a good way to catch string inputs to the function. But what happens if you pass a char input to myNewFunc, such as `myNewFunc('a')`?
+
+Somehow, the try-catch block doesn't catch this error. For this, we can run a different type of test. For example, we can first check that `inputVar` is numeric before we proceed to the try-catch block.
+
+```matlab
+function outputVar = myNewFunc(inputVar)
+% REQUIRES: inputVar is numeric
+    disp('This is to practice with the debugger');
+    
+    if ~isnumeric(inputVar)
+        error('inputVar must be numeric')
+    end
+    
+    try
+        outputVar = helperFunc(inputVar);
+    catch ME
+        if strcmp(ME.identifier, 'MATLAB:UndefinedFunction')
+            error('myNewFunc expects numeric input')
+        end
+    end
+end
+
+function helperOut = helperFunc(helperIn)
+% REQUIRES: helperIn is numeric
+    helperOut = helperIn .^ 2;
+end
+```
